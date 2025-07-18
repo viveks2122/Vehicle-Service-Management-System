@@ -28,7 +28,9 @@ SECRET_KEY = 'ftxnh_7475z^joy_*l9t*qnqow!@)y#(541^w1=(8--=3g#4*d'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["vehicle-service-management-system-5.onrender.com"]
+ALLOWED_HOSTS = ["*"]
+
 
 
 # Application definition
