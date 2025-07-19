@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: vehicle-service-management
+    env: python
+    buildCommand: |
+      pip install -r requirements.txt
+      python manage.py makemigrations
+      python manage.py migrate
+    startCommand: gunicorn vehicleservicemanagement.wsgi:application
+    envVars:
+      - key: DJANGO_SETTINGS_MODULE
+        value: vehicleservicemanagement.settings
+      - key: PYTHON_VERSION
+        value: 3.13.4
